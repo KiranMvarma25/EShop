@@ -1,0 +1,609 @@
+*{
+    box-sizing: border-box;
+    /* padding: 0%;
+    margin: 0%; */
+}
+  
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(209, 208, 208);
+    overflow: hidden;
+    /* background-color: rgba(103, 103, 103, 0.178); */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  */
+}  
+  
+.parent{
+    border: 0px solid black;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+  
+.sellerForm{
+    border: 0px solid red;
+    padding: 20px;
+    border-radius: 10px;
+    background-color:#66acf7;
+    margin-bottom: 10px;
+}
+  
+.buyerForm{
+    border: 0px solid red;
+    padding: 20px;
+    border-radius: 10px;
+    background-color:#66acf7;
+}
+
+.loginheading{
+    text-align: center;
+    background-color: #2980dc;
+    color: white;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+.logininputField{
+    width: 350px;
+    padding: 3px;
+    border-radius: 7px;
+    font-size: large;
+    margin-top: 7PX;
+    border: 1px solid #9f9797;
+}
+
+.logininputLabel{
+    font-size: larger;
+    font-weight: 700;
+}
+
+.loginButtons{
+    padding: 7px;
+    font-size: medium;
+    font-weight: 700;
+    border-radius: 7px;
+    color: white;
+    background-color: #1c81ed;
+    cursor: pointer;
+}
+
+.loginButtons:hover{
+    background-color: #0056b3;
+    font-style: oblique;
+}
+
+
+/*       sidebar       */
+
+.sidebarParent {
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar2 {
+    background-color: white;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding: 25px;
+    width: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Toggle Button */
+.sidebarToggleButton {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: #2980dc;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/* Sidebar Modal */
+.sidebarModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+/* Close Button */
+.closeButton {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+
+.sidebarItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebarItem {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    margin: 15px 0;
+    transition: color 0.3s;
+}
+
+.sidebarItem:hover {
+    /* color: #007bff; */
+    background-color: #0056b3;
+    padding: 0px 30px;
+    color: white;
+    border-radius: 10px;
+}
+
+.logoutButton {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.logoutButton:hover {
+    background-color: #d43f3f;
+}
+
+.mainContent {
+    flex: 1;
+    overflow-y: auto; 
+    padding: 20px;
+    max-height: 100vh;
+    background-color: rgba(243, 243, 243, 0.852);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+
+.mainContent::-webkit-scrollbar {
+    width: 6px;
+}
+
+.mainContent::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.mainContent::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.storeItems{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* padding: 25px; */
+    /* background-color: rgba(180, 180, 215, 0.59); */
+    /* margin-left: 25px;
+    margin-right: 30px; */
+    /* margin-top: 25px; */
+    /* margin-bottom: 100px; */
+}
+
+.items{
+    border: 2px solid black;
+    padding: 10px;
+    background-color: rgba(191, 191, 209, 0.59);
+    width: 300px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+/* @media(max-width : 825px){
+    .storeItems{
+        padding: 25px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    
+    .items{
+        width: 200px;
+    }
+}
+
+.itemHeading{
+    text-align: center;
+} */
+
+.buyButton{
+    font-size:large;
+    padding: 7px;
+    /* margin-top: 25px; */
+    background-color: rgb(72, 122, 151);
+    color: aliceblue;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.buyButton:hover{
+    background-color: rgb(26, 103, 148);
+    cursor: pointer;
+    font-style: oblique;
+}
+
+/* .profileParent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile{
+    background-color: rgba(204, 204, 211, 0.59);
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+} */
+
+.profile{
+    text-align: center;
+}
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.miniProfile{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 0px 5px;
+    border-radius: 10px;
+}
+
+.searchParent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.searchInput{
+    padding: 8px;
+    font-size: medium;
+    border-radius: 7px;
+}
+
+.searchButton{
+    padding: 6px;
+    font-size: medium;
+    border-radius: 10px;
+    background-color: #1c81edd3;
+    margin-left: 10px;
+}
+
+.profileName{
+    margin-left: 10px;
+}
+
+.documentGrandParent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.documentsParent{
+    width: 75%;
+}
+
+.documents1{
+    border: 0px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    /* width: 75%; */
+    margin: auto;
+}
+
+.documentsChild{
+    border: 0px solid black;
+    width: 175px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 0px 10px;
+}
+
+.icon{
+    color: #1c81ed;
+    background-color: #1c81ed7b;
+    padding: 5px;
+    border-radius: 50px;
+}
+
+.sidebarIcon{
+    color: #1c81ed;
+    font-size: x-large;
+}
+
+.bar{
+    border: 0px solid black;
+    padding: 3px;
+    border-radius: 10px;
+    background-color: #1c81ed;
+}
+
+.filesData{
+    border: 0px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.documents2{
+    width: 20%;
+    border: 0px solid black;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.circle{
+    border: 10px solid #2980dc;
+    border-radius: 90px;
+    width: 100px;
+    margin: auto;
+}
+
+.sidebar{
+    border: 0px solid black;
+    padding: 0px 10px;
+}
+
+.sidebarChild{
+    border: 0px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+}
+
+.tableParent{
+    border: 0px solid black;
+    background-color: white;
+    width: 450px;
+    margin-top: 50px;
+    margin-left: 50px;
+    border-radius: 20px;
+}
+
+.tableHeadingChild{
+    padding: 10px;
+    background-color: whitesmoke;
+}
+
+.tableDataChild{
+    padding: 7px;
+}
+
+@media screen and (max-width: 900px) {
+    .documentGrandParent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .documentsParent, 
+    .documents2 {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .documents1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .documentsChild {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .tableParent {
+        width: 100%;
+        overflow-x: auto;
+        margin: 20px auto;
+    }
+
+    .tableParent table {
+        width: 100%;
+    }
+
+    .sidebarChild {
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .circle {
+        width: 80px;
+        height: 80px;
+        font-size: 14px;
+    }
+}
+
+
+.orderMore{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.task{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.taskChild{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.map{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.mapDiv{
+    border: 0px solid black;
+    /* padding: 0px 10px; */
+    width: 225px;
+    padding: 0px 10px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.mapchild{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.orderParent{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px 0px;
+    align-items: center;
+    margin: auto;
+}
+
+.mapDiv{
+    margin: 10px 0px;
+}
+
+.activityTableParent{
+    background-color: white;
+    /* width: 250px; */
+}
+
+@media screen and (max-width: 900px) {
+    .taskChild {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map img {
+        width: 100%;
+        height: auto;
+    }
+
+    .orderParent {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mapDiv {
+        width: 90%;
+        max-width: 300px;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .mapchild {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+.activityTable{
+    background-color: rgba(240, 236, 236, 0.984);
+    padding: 0px 10px;
+    border-radius: 10px;
+    width: 150px;
+}
+
+@media screen and (max-width: 900px) {
+    .documentGrandParent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .documentsParent {
+        width: 100%;
+    }
+
+    .documents1 {
+        justify-content: center;
+    }
+
+    .documentsChild {
+        width: 90%;
+        max-width: 250px;
+        margin-bottom: 10px;
+    }
+
+    .documents2 {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .tableParent {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .activityTableParent {
+        width: 90%;
+        margin: auto;
+    }
+
+    .activityTable {
+        width: auto;
+        padding: 5px;
+    }
+}
